@@ -1,0 +1,131 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #ff9090;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.game-container {
+    display: inline-block;
+    margin: 0 auto;
+    background: gold;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 10px 10px 0 0 #000000;
+}
+
+.game-container header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0 0 5px 0;
+    line-height: 1;
+}
+
+#dashboard {
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 10px 0 0;
+    padding: 5px 10px;
+    border-radius: 100vw;
+}
+
+#dashboard li {
+    display: inline-block;
+    text-align: center;
+}
+
+#dashboard li span {
+    margin: 0 10px 0 0;
+}
+
+#dashboard li:last-child span {
+    margin: 0;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 75px;
+    grid-auto-rows: 75px;
+    gap: 10px;
+    margin: 20px 0 0;
+}
+
+#board.compare {
+    pointer-events: none;
+}
+
+#board li {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 3px solid #000000;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition: transform 150ms;
+}
+
+#board li img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 300ms, visibility 300ms;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#board li.flip,
+#board li.open {
+    transform: rotateY(0);
+}
+
+#board li.flip img,
+#board li.open img {
+    visibility: visible;
+    opacity: 1;
+}
+
+#start {
+    margin: 20px 0 0 0;
+    outline: none;
+    border-radius: 8px;
+    font-size: 27px;
+    background: green;
+    color: #ffffff;
+    padding: 2px 18px;
+    border: 3px solid #000000;
+    cursor: pointer;
+    transition: transform 140ms;
+}
+#start.hide {
+    display: none;
+}
+
+#start:hover {
+    transform: translateY(-2px);
+}

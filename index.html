@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <base href="./">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script async src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <audio id="audio"></audio>
+        <header>
+            <h1>Memory Game</h1>
+            <ul id="dashboard">
+                <li>Score: <span id="score">3</span></li>
+                <li>Steps: <span id="steps">0</span></li>
+                <li>Timer: <span id="timer">120</span></li>
+            </ul>
+        </header>
+        <ul id="board"></ul>
+        <button id="start">Start Game</button>
+        <div class="result-screen"></div>
+    </div>
+
+</body>
+</html>
